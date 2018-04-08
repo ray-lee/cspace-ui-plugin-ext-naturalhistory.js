@@ -1,6 +1,6 @@
 {
   "name": "cspace-ui-plugin-ext-naturalhistory",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Natural History extension plugin for the CollectionSpace UI",
   "author": "Ray Lee <rhlee@berkeley.edu>",
   "license": "ECL-2.0",

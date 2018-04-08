@@ -15,7 +15,7 @@ export default (configContext) => {
   } = configContext.recordComponents;
 
   return (
-    <Field name="taxonomicIdentGroupList" subpath="ns2:collectionobjects_naturalhistory">
+    <Field name="taxonomicIdentGroupList" subpath="ns2:collectionobjects_naturalhistory_extension">
       <Field name="taxonomicIdentGroup">
         <Panel>
           <InputTable name="taxonName">

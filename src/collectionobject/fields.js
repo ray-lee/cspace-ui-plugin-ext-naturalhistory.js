@@ -22,10 +22,10 @@ export default (configContext) => {
   } = configContext.config;
 
   return {
-    'ns2:collectionobjects_naturalhistory': {
+    'ns2:collectionobjects_naturalhistory_extension': {
       [config]: {
         service: {
-          ns: 'http://collectionspace.org/services/collectionobject/domain/naturalhistory',
+          ns: 'http://collectionspace.org/services/collectionobject/domain/naturalhistory_extension',
         },
       },
       taxonomicIdentGroupList: {
