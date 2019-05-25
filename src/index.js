@@ -1,6 +1,6 @@
 import collectionobject from './collectionobject';
 
-module.exports = () => configContext => ({
+export default () => configContext => ({
   extensions: {
     naturalhistory: {
       collectionobject: collectionobject(configContext),
