@@ -8,7 +8,7 @@ export default {
     },
     taxonIdent: {
       id: 'inputTable.collectionobject.taxonIdent',
-      defaultMessage: 'Identified by',
+      defaultMessage: 'Identification by',
     },
     taxonReference: {
       id: 'inputTable.collectionobject.taxonReference',

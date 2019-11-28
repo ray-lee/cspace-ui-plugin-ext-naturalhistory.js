@@ -50,6 +50,10 @@ export default (configContext) => {
           taxon: {
             [config]: {
               messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.taxon.fullName',
+                  defaultMessage: 'Taxonomic identification scientific name',
+                },
                 name: {
                   id: 'field.collectionobjects_naturalhistory.taxon.name',
                   defaultMessage: 'Scientific name',
@@ -88,7 +92,11 @@ export default (configContext) => {
               messages: defineMessages({
                 fullName: {
                   id: 'field.collectionobjects_naturalhistory.identBy.fullName',
-                  defaultMessage: 'Taxonomic identification by name',
+                  defaultMessage: 'Taxonomic identification by',
+                },
+                groupName: {
+                  id: 'field.collectionobjects_naturalhistory.identBy.groupName',
+                  defaultMessage: 'Identification by',
                 },
                 name: {
                   id: 'field.collectionobjects_naturalhistory.identBy.name',
@@ -111,6 +119,10 @@ export default (configContext) => {
                   id: 'field.collectionobjects_naturalhistory.identDateGroup.fullName',
                   defaultMessage: 'Taxonomic identification date',
                 },
+                groupName: {
+                  id: 'field.collectionobjects_naturalhistory.identDateGroup.groupName',
+                  defaultMessage: 'Identification date',
+                },
                 name: {
                   id: 'field.collectionobjects_naturalhistory.identDateGroup.name',
                   defaultMessage: 'Date',
@@ -128,6 +140,10 @@ export default (configContext) => {
                 fullName: {
                   id: 'field.collectionobjects_naturalhistory.institution.fullName',
                   defaultMessage: 'Taxonomic identification institution',
+                },
+                groupName: {
+                  id: 'field.collectionobjects_naturalhistory.institution.groupName',
+                  defaultMessage: 'Identification institution',
                 },
                 name: {
                   id: 'field.collectionobjects_naturalhistory.institution.name',
@@ -169,6 +185,10 @@ export default (configContext) => {
                   id: 'field.collectionobjects_naturalhistory.reference.fullName',
                   defaultMessage: 'Taxonomic identification reference source',
                 },
+                groupName: {
+                  id: 'field.collectionobjects_naturalhistory.reference.groupName',
+                  defaultMessage: 'Reference source',
+                },
                 name: {
                   id: 'field.collectionobjects_naturalhistory.reference.name',
                   defaultMessage: 'Source',
@@ -185,6 +205,10 @@ export default (configContext) => {
                 fullName: {
                   id: 'field.collectionobjects_naturalhistory.refPage.fullName',
                   defaultMessage: 'Taxonomic identification reference page',
+                },
+                groupName: {
+                  id: 'field.collectionobjects_naturalhistory.refPage.groupName',
+                  defaultMessage: 'Reference page',
                 },
                 name: {
                   id: 'field.collectionobjects_naturalhistory.refPage.name',
