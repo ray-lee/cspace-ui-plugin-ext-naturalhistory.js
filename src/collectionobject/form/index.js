@@ -1,5 +1,5 @@
 import taxonomicIdentGroupList from './taxonomicIdentGroupList';
 
-export default configContext => ({
+export default (configContext) => ({
   taxonomicIdentGroupList: taxonomicIdentGroupList(configContext),
 });
