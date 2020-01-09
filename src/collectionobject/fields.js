@@ -30,6 +30,8 @@ export default (configContext) => {
           ns: 'http://collectionspace.org/services/collectionobject/domain/naturalhistory_extension',
         },
       },
+      // FIXME: determinationHistoryGroupList appears to be redundant with taxonomicIdentGroupList.
+      // taxonomicIdentGroupList is used by the botgarden and anthro profiles.
       taxonomicIdentGroupList: {
         [config]: {
           view: {
@@ -347,6 +349,222 @@ export default (configContext) => {
               }),
               view: {
                 type: CheckboxInput,
+              },
+            },
+          },
+        },
+      },
+      // FIXME: determinationHistoryGroupList appears to be redundant with taxonomicIdentGroupList.
+      // determinationHistoryGroupList is used by the herbarium profile.
+      determinationHistoryGroupList: {
+        [config]: {
+          view: {
+            type: CompoundInput,
+          },
+        },
+        determinationHistoryGroup: {
+          [config]: {
+            messages: defineMessages({
+              name: {
+                id: 'field.collectionobjects_naturalhistory.determinationHistoryGroup.name',
+                defaultMessage: 'Determination history',
+              },
+            }),
+            repeating: true,
+            view: {
+              type: CompoundInput,
+            },
+          },
+          determinationTaxon: {
+            [config]: {
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationTaxon.fullName',
+                  defaultMessage: 'Taxonomic identification scientific name',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.determinationTaxon.name',
+                  defaultMessage: 'Scientific name',
+                },
+              }),
+              view: {
+                type: AutocompleteInput,
+                props: {
+                  source: 'taxon/local',
+                },
+              },
+            },
+          },
+          determinationQualifier: {
+            [config]: {
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationQualifier.fullName',
+                  defaultMessage: 'Taxonomic identification qualifier',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.determinationQualifier.name',
+                  defaultMessage: 'Qualifier',
+                },
+              }),
+              view: {
+                type: TermPickerInput,
+                props: {
+                  source: 'taxonqualifier',
+                },
+              },
+            },
+          },
+          determinationBy: {
+            [config]: {
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationBy.fullName',
+                  defaultMessage: 'Taxonomic identification by',
+                },
+                groupName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationBy.groupName',
+                  defaultMessage: 'Identification by',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.determinationBy.name',
+                  defaultMessage: 'Name',
+                },
+              }),
+              view: {
+                type: AutocompleteInput,
+                props: {
+                  source: 'person/local,person/shared',
+                },
+              },
+            },
+          },
+          determinationDateGroup: {
+            [config]: {
+              dataType: DATA_TYPE_STRUCTURED_DATE,
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationDateGroup.fullName',
+                  defaultMessage: 'Taxonomic identification date',
+                },
+                groupName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationDateGroup.groupName',
+                  defaultMessage: 'Identification date',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.determinationDateGroup.name',
+                  defaultMessage: 'Date',
+                },
+              }),
+              view: {
+                type: StructuredDateInput,
+              },
+            },
+            ...extensions.structuredDate.fields,
+          },
+          determinationInstitution: {
+            [config]: {
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationInstitution.fullName',
+                  defaultMessage: 'Taxonomic identification institution',
+                },
+                groupName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationInstitution.groupName',
+                  defaultMessage: 'Identification institution',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.determinationInstitution.name',
+                  defaultMessage: 'Institution',
+                },
+              }),
+              view: {
+                type: AutocompleteInput,
+                props: {
+                  source: 'organization/local,organization/shared',
+                },
+              },
+            },
+          },
+          determinationKind: {
+            [config]: {
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationKind.fullName',
+                  defaultMessage: 'Taxonomic identification kind',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.determinationKind.name',
+                  defaultMessage: 'Kind',
+                },
+              }),
+              view: {
+                type: TermPickerInput,
+                props: {
+                  source: 'taxonkind',
+                },
+              },
+            },
+          },
+          determinationReference: {
+            [config]: {
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationReference.fullName',
+                  defaultMessage: 'Taxonomic identification reference source',
+                },
+                groupName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationReference.groupName',
+                  defaultMessage: 'Reference source',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.determinationReference.name',
+                  defaultMessage: 'Source',
+                },
+              }),
+              view: {
+                type: TextInput,
+              },
+            },
+          },
+          determinationRefPage: {
+            [config]: {
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationRefPage.fullName',
+                  defaultMessage: 'Taxonomic identification reference page',
+                },
+                groupName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationRefPage.groupName',
+                  defaultMessage: 'Reference page',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.determinationRefPage.name',
+                  defaultMessage: 'Page',
+                },
+              }),
+              view: {
+                type: TextInput,
+              },
+            },
+          },
+          determinationNote: {
+            [config]: {
+              messages: defineMessages({
+                fullName: {
+                  id: 'field.collectionobjects_naturalhistory.determinationNote.fullName',
+                  defaultMessage: 'Taxonomic identification note',
+                },
+                name: {
+                  id: 'field.collectionobjects_naturalhistory.determinationNote.name',
+                  defaultMessage: 'Note',
+                },
+              }),
+              view: {
+                type: TextInput,
+                props: {
+                  multiline: true,
+                },
               },
             },
           },
