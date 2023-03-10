@@ -1,11 +1,16 @@
 export default (configContext) => {
   const {
+    lib,
+    recordComponents,
+  } = configContext;
+
+  const {
     React,
-  } = configContext.lib;
+  } = lib;
 
   const {
     Field,
-  } = configContext.recordComponents;
+  } = recordComponents;
 
   return (
     <Field name="typeSpecimenGroupList" subpath="ns2:collectionobjects_naturalhistory_extension">

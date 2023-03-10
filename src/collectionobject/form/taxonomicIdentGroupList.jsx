@@ -1,18 +1,24 @@
 export default (configContext) => {
   const {
+    layoutComponents,
+    lib,
+    recordComponents,
+  } = configContext;
+
+  const {
     React,
-  } = configContext.lib;
+  } = lib;
 
   const {
     Col,
     Cols,
     Panel,
-  } = configContext.layoutComponents;
+  } = layoutComponents;
 
   const {
     Field,
     InputTable,
-  } = configContext.recordComponents;
+  } = recordComponents;
 
   return (
     <Field name="taxonomicIdentGroupList" subpath="ns2:collectionobjects_naturalhistory_extension">
